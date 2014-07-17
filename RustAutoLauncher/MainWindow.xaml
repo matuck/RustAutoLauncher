@@ -1,0 +1,23 @@
+﻿<Window x:Class="RustAutoLauncher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Rust Auto Launcher" Height="350" Width="525" Background="{DynamicResource Background}" WindowStyle="None" AllowsTransparency="True" MouseDown="Window_MouseDown">
+    <Window.Resources>
+        <ImageBrush x:Key="Background" ImageSource="Resources/rust.jpg"/>
+    </Window.Resources>
+    <Grid x:Name="RustAutoLauncher">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="424*"/>
+            <ColumnDefinition Width="93*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="closelabel" Content="X" VerticalAlignment="Top" RenderTransformOrigin="4,0.038" FontSize="36" Foreground="Red" MouseDown="closelabel_MouseDown" HorizontalAlignment="Right" Width="31" Height="48" Margin="0,-11,0,0" Grid.Column="1"/>
+        <Label x:Name="minimizelabel" Content="___" HorizontalAlignment="Left" Margin="17.213,-22,0,305" Foreground="Red" FontSize="36" Width="40" Height="59" VerticalAlignment="Bottom" MouseDown="minimizelabel_MouseDown" Grid.Column="1"/>
+        <ComboBox x:Name="serverdropdown" HorizontalAlignment="Left" Margin="126,113,0,0" VerticalAlignment="Top" Width="295" />
+        <Button x:Name="connectbutton" Content="Connect" HorizontalAlignment="Left" Margin="126,140,0,0" VerticalAlignment="Top" Width="145" Click="connectbutton_Click"/>
+        <Button x:Name="deleteserverbutton" Content="Delete Server" HorizontalAlignment="Left" Margin="276,165,0,0" VerticalAlignment="Top" Width="145" Click="deleteserverbutton_Click"/>
+        <Button x:Name="addserverbutton" Content="Add Server" HorizontalAlignment="Left" Margin="126,165,0,0" VerticalAlignment="Top" Width="145" Click="addserverbutton_Click"/>
+        <Button x:Name="launchtomenubutton" Content="Launch to Menu" HorizontalAlignment="Left" Margin="276,140,0,0" VerticalAlignment="Top" Width="145" Click="launchtomenubutton_Click"/>
+
+    </Grid>
+</Window>
